@@ -1,0 +1,108 @@
+body {
+    text-align: center;
+    background-color: white;
+    padding-top: 45px;
+    font-family: 'Lato', sans-serif;
+    font-size: 100%;
+}
+#navbar {
+    list-style-type: none;
+    background-color: #ffe056;
+    overflow: hidden;
+    width:100%;
+    position:fixed;
+    top:5px;
+
+}
+#home, #valor, #bitcoin, #quiz{
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  margin:0px;
+  padding:0px;
+  text-decoration: none;
+  border-right:2px solid white;
+}
+a.navigationbar {
+  display:block;
+  width: 200px;
+  height: 45px;
+  padding-top:10px;
+
+}
+#home:hover, #valor:hover, #bitcoin:hover, #quiz:hover {
+  background-color: #e7cb4f;
+}
+li a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+li a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+li a:active {
+  color: black;
+  background-color: transparent;
+}
+
+.navigationbar {
+  width:device-width;
+}
+#artigo {
+  text-align: left;
+  margin: 80px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: 'charter', serif;
+  font-size: 115%;
+}
+img {
+  max-width:100%;
+  min-width:320px;
+  height:auto;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.footer {
+  background-color:#ffe056;
+  padding:20px;
+}
+.noticiasp {
+  text-align:center;
+}
+#artigo h4::before {
+  content:"\a";
+  white-space:pre;
+}
+.footnote {
+  list-style-type: none;
+}
+#result {
+  font-size: 150%;
+  background-color: #5FFB88;
+}
+#capa {
+  background-color: white;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-family: Lato"
+}
+#capa2 {
+  background-color: #f38f37;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-family: Lato
+}
+#capa3 {
+  background-color: white;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  font-family: Lato"
+}

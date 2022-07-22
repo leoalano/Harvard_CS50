@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      Bank Details
+{% endblock title %}
+
+{% block main %}
+<br>
+<h1 style="text-align: center;">BANK DETAILS</h1>
+<p style="text-align: center;">You have not registered yet your bank details with us. Please fill the form below so we can complete your sell order.</p>
+<br>
+
+<form class="market" action="/confirmed" method="post">
+    <div> 
+        <input autocomplete="off" autofocus class="form-control" name="bank" placeholder="Name of Bank" type="text">
+    </div>
+    <br>
+    <div> 
+        <input autocomplete="off" autofocus class="form-control" name="sortcode" placeholder="Sort code" type="text">
+    </div>
+    <br>
+    <div> 
+        <input autocomplete="off" autofocus class="form-control" name="account" placeholder="account" type="text">
+    </div>
+    <br>
+    <div> 
+        <input autocomplete="off" autofocus class="form-control" name="pix" placeholder="PIX" type="text">
+    </div>
+    <br>
+    <div> 
+        <input autocomplete="off" autofocus class="form-control" name="cpf" placeholder="Confirm CPF" type="text">
+    </div>
+    <br>
+    <button class="btn btn-primary" name="buttonbank" value="detailsok" type="submit">Send</button>
+
+
+</form>
+    
+
+{% endblock main %}

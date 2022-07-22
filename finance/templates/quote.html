@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote
+{% endblock %}
+
+{% block main %}
+    <h1 style="font-size:85%">QUOTE</h1>
+    <p>Type below the symbol of your chosen stock</p>
+    <br>
+
+    <form action="/quote" method="post">
+        <div>
+            <input autocomplete="off" autofocus class="form-control" name="symbol" placeholder="stock symbol" type="text">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Quote</button>
+
+{% endblock %}

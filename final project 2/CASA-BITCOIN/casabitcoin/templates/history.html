@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      History
+{% endblock title %}
+
+{% block main %}
+
+
+<br>
+<h1 style="text-align: center;">MY HISTORY</h1>
+    <br>
+    <table class="portfolio">
+        <tr>
+            <th>TRANSACTION ID</th>
+            <th>DATE / TIME</th>
+            <th>COIN SYMBOL</th>
+            <th>PRICE</th>
+            <th>NUMBER OF COINS</th>
+            <th>TOTAL</th>
+            <th>TYPE OF TRANSACTION</th>
+            <th>COMMENTS</th>
+            <th>STATUS</th>
+        </tr>
+        {% for i in range(size[0]) %}
+        <tr>
+            <td>{{ history[i][0] }}</td>
+            <td>{{ history[i][1] }}</td>
+            <td>{{ history[i][2] }}</td>
+            {% if history[i][3] == "Pending" %}
+                <td> {{ history[i][3] }}</td>
+            {% else %}
+                <td>R$ {{ history[i][3] }}</td>
+            {% endif %} 
+            <td>{{ history[i][4] }}</td>
+            {% if history[i][5] == "Pending" %}
+                <td> {{ history[i][5] }}</td>
+            {% else %}
+                <td>R$ {{ '{0:.2f}'.format(history[i][5]) }}</td>
+            {% endif %}
+            <td>{{ history[i][6] }}</td>
+            <td>{{ history[i][7] }}</td>
+            {% if history[i][8] == "Missing Details" %}
+                <td>
+                    <form action="/bankdetails">
+                        <button class="btn btn-danger" type="submit">Bank Details Missing</button>
+                    </form>        
+                </td>
+            {% else %}
+                <td>{{ history[i][8] }}</td>
+            {% endif %}            
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+{% endblock main %}

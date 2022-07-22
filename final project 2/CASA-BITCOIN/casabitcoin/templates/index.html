@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      Home
+{% endblock title %}
+
+{% block main %}
+
+<div style="height:560px; background-color: #1D2330; overflow:hidden; box-sizing: border-box; border: 1px solid #282E3B; border-radius: 4px; text-align: right; line-height:14px; font-size: 12px; font-feature-settings: normal; text-size-adjust: 100%; box-shadow: inset 0 -20px 0 0 #262B38;padding:1px;padding: 0px; margin: 0px; width: 100%;"><div style="height:540px; padding:0px; margin:0px; width: 100%;"><iframe src="https://widget.coinlib.io/widget?type=chart&theme=dark&coin_id=859&pref_coin_id=3315" width="100%" height="536px" scrolling="auto" marginwidth="0" marginheight="0" frameborder="0" border="0" style="border:0;margin:0;padding:0;line-height:14px;"></iframe></div><div style="color: #626B7F; line-height: 14px; font-weight: 400; font-size: 11px; box-sizing: border-box; padding: 2px 6px; width: 100%; font-family: Verdana, Tahoma, Arial, sans-serif;"><a href="https://coinlib.io" target="_blank" style="font-weight: 500; color: #626B7F; text-decoration:none; font-size:11px">Cryptocurrency Prices</a>&nbsp;by Coinlib</div></div>
+
+<!--- reserve script in case coinlib's one is down. 
+      
+      <script type="text/javascript">
+      baseUrl = "https://widgets.cryptocompare.com/";
+      var scripts = document.getElementsByTagName("script");
+      var embedder = scripts[ scripts.length - 1 ];
+      (function (){
+      var appName = encodeURIComponent(window.location.hostname);
+      if(appName==""){appName="local";}
+      var s = document.createElement("script");
+      s.type = "text/javascript";
+      s.async = true;
+      var theUrl = baseUrl+'serve/v3/coin/chart?fsym=BTC&tsyms=BRL,USD';
+      s.src = theUrl + ( theUrl.indexOf("?") >= 0 ? "&" : "?") + "app=" + appName;
+      embedder.parentNode.appendChild(s);
+      })();
+</script> --->
+
+<br>
+<br>
+<br>
+<h2 style="text-align: center;">NEWS</h2>
+<br>
+
+<table class="portfolio">
+      <tr>
+            <td><a href="{{ articles[0]['url'] }}"><img src="{{ articles[0]['urlToImage'] }}" class='pics' style="width:400px;height:220px;"></a></td>
+            <td><a href="{{ articles[1]['url'] }}"><img src="{{ articles[1]['urlToImage'] }}" class='pics' style="width:400px;height:220px;"></a></td>
+            <td><a href="{{ articles[2]['url'] }}"><img src="{{ articles[2]['urlToImage'] }}"class='pics' style="width:400px;height:220px;"></a></td>
+      </tr>
+      <tr>
+          <th class='news'><a href="{{ articles[0]['url'] }}">{{ articles[0]['title'] }}</a></th>
+          <th class='news'><a href="{{ articles[1]['url'] }}">{{ articles[1]['title'] }}</a></th>
+          <th class='news'><a href="{{ articles[2]['url'] }}">{{ articles[2]['title'] }}</a></th>
+      </tr>
+      <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+      </tr>
+      <tr>
+            <td><a href="{{ articles[3]['url'] }}"><img src="{{ articles[3]['urlToImage'] }}" class='pics' style="width:400px;height:220px;"></a></td>
+            <td><a href="{{ articles[4]['url'] }}"><img src="{{ articles[4]['urlToImage'] }}" class='pics' style="width:400px;height:220px;"></a></td>
+            <td><a href="{{ articles[5]['url'] }}"><img src="{{ articles[5]['urlToImage'] }}"class='pics' style="width:400px;height:220px;"></a></td>
+      </tr>
+      <tr>
+          <th class='news'><a href="{{ articles[3]['url'] }}">{{ articles[3]['title'] }}</a></th>
+          <th class='news'><a href="{{ articles[4]['url'] }}">{{ articles[4]['title'] }}</a></th>
+          <th class='news'><a href="{{ articles[5]['url'] }}">{{ articles[5]['title'] }}</a></th>
+      </tr>
+      <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+      </tr>
+      <tr>
+            <td><a href="{{ articles[6]['url'] }}"><img src="{{ articles[6]['urlToImage'] }}" class='pics' style="width:400px;height:220px;"></a></td>
+            <td><a href="{{ articles[7]['url'] }}"><img src="{{ articles[7]['urlToImage'] }}" class='pics' style="width:400px;height:220px;"></a></td>
+            <td><a href="{{ articles[8]['url'] }}"><img src="{{ articles[8]['urlToImage'] }}"class='pics' style="width:400px;height:220px;"></a></td>
+      </tr>
+      <tr>
+          <th class='news'><a href="{{ articles[6]['url'] }}">{{ articles[6]['title'] }}</a></th>
+          <th class='news'><a href="{{ articles[7]['url'] }}">{{ articles[7]['title'] }}</a></th>
+          <th class='news'><a href="{{ articles[8]['url'] }}">{{ articles[8]['title'] }}</a></th>
+      </tr>
+     
+     
+
+      
+
+{% endblock main %}

@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h1 style="font-size:85%">QUOTE</h1>
+    <br>
+    <p>The stock of <b>{{ symbol }}</b> has the current price of <b>${{ price | usd }}</b>.</p>
+
+    <p>{{ quoted }}</p>
+
+{% endblock %}

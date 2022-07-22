@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+
+{% block main %}
+    <h1 style="font-size:250%">MY PORTFOLIO</h1>
+    <br>
+    <table class="portfolio">
+        <tr>
+            <th>STOCK</th>
+            <th>NUMBER OF SHARES</th>
+            <th>CURRENT PRICE</th>
+            <th>TOTAL HOLDING</th>
+        </tr>
+        {% for i in range(stockVariety) %}
+        <tr>
+            <td>{{ stocks[i]['Symbol'] }}</td>
+            <td>{{ nshares[i]['SymbolBalance'] }}</td>
+            <td>{{ currentprice[i]['price'] | usd}}</td>
+            <td>{{ totalH[i] | usd}} </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <br>
+    <br>
+    <br>
+
+    <table class="portfolio">
+        <tr>
+            <th>STOCKS TOTAL</th>
+            <td> {{ stockTotal | usd}} </td>
+        </tr>
+        <tr>
+            <th>CASH TOTAL</th>
+            <td> {{ currentBalance[0]['cash'] | usd}} </td>
+        </tr>
+        <tr>
+            <th>TOTAL BALANCE</th>
+            <td> {{ totalBalance | usd}} </td>
+        </tr>
+    </table>
+
+    <br>
+    <br>
+
+    <h4>MAKE A DEPOSIT</h3>
+    <h6>Type below the amount you would like to add to your account</h5>
+
+    <form action="/" method="post">
+        <div>
+            <input autocomplete="off" autofocus class="form-control" name="deposit" placeholder="Deposit Amount" type="number">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit" onclick="alertfunction()">Make Deposit</button>
+
+        <script>
+        var message = "Your deposit has been confirmed."
+        function alertfunction() {
+            alert(message);
+        }
+        </script>
+
+
+
+{% endblock %}
