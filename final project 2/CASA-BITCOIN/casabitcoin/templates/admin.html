@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      Admin 
+{% endblock title %}
+
+{% block main %}
+  <title>Admin</title>
+</head>
+<body>
+  <br>
+  <h1 style="text-align: center;">ADMIN</h1>
+  <br>
+  <br>
+  <table class="portfolio">
+    <h5 style="text-align: center;">HISTORY</h4>
+        <tr>
+            <th>TRANSACTION ID</th>
+            <th>USER ID</th>
+            <th>DATE / TIME</th>
+            <th>COIN SYMBOL</th>
+            <th>PRICE</th>
+            <th>NUMBER OF COINS</th>
+            <th>TOTAL</th>
+            <th>TYPE OF TRANSACTION</th>
+            <th>COMMENTS</th>
+            <th>STATUS</th>
+            <th>EDIT</th>
+        </tr>
+        {% for i in range(size[0]) %}
+        <tr>
+            <td>{{ history[i][0] }}</td>
+            <td>{{ history[i][1] }}</td>
+            <td>{{ history[i][2] }}</td>
+            <td>{{ history[i][3] }}</td>
+            {% if history[i][4] == "Pending" %}
+                <td> {{ history[i][4] }}</td>
+            {% else %}
+                <td>R$ {{ history[i][4] }}</td>
+            {% endif %} 
+            <td>{{ history[i][5] }}</td>
+            {% if history[i][6] == "Pending" %}
+                <td> {{ history[i][6] }}</td>
+            {% else %}
+                <td>R$ {{ '{0:.2f}'.format(history[i][6]) }}</td>
+            {% endif %}
+            <td>{{ history[i][7] }}</td>
+            <td>{{ history[i][8] }}</td>
+            <td>{{ history[i][9] }}</td>      
+            <td>
+                <form action="/admin2" method="post">
+                <button class="btn btn-success" type="submit" name="{{ history[i][0] }}">Edit Details</button>
+            </form>   
+            </td>     
+        </tr>
+        {% endfor %}
+    </table>
+
+
+</body>
+{% endblock main %}

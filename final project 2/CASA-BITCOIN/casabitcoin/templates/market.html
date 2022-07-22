@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      Market
+{% endblock title %}
+
+
+{% block main %}
+<br>
+<h1 style="text-align: center;">MARKET</h1>
+<hr>
+<br>
+<br>
+
+<form class="market" action="/market" method="post">
+    <h4>DEPOSIT AND BUY</h4>
+    <br>
+    <div class="marketform1">
+        <select autocomplete="off" autofocus class="form-control" name="coinBuy" placeholder="Currency" type="text" required>
+            <option value="" disabled selected>Select your currency</option>
+            <option>Dollar</option>
+            <option>Bitcoin</option>
+        </select>
+    </div>
+    <br>
+    <div class="marketform1"> 
+        <input autocomplete="off" autofocus class="form-control" name=totalBuy placeholder="Quantity in R$" type="number" step=".01" required>
+    </div>
+    <br>
+    <div class="marketform1"> 
+        <textarea autocomplete="off" autofocus class="form-control" name=commentBuy placeholder="Comments (optional)" type="text"></textarea>
+    </div>
+    <br>
+    <button class="btn btn-success" name="button" type="submit" value="buy">Buy Order</button>
+    <br>
+    <br>
+    <p>After clicking, you'll receive an email with the bank details for you to make a transfer. After the transfer we market purchase your coins for you within 24 hours.</p>
+</form>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+<form class="market" action="/market" method="post">
+    <h4>SELL</h4>
+    <br>
+    <div class="marketform2">
+        <select autocomplete="off" autofocus class="form-control" name="coinSell" value="sell" placeholder="Currency" type="text" required>
+            <option value="" disabled selected>Select your currency</option>
+            <option>Dollar</option>
+            <option>Bitcoin</option>
+        </select>
+    </div>
+    <br>
+    <div class="marketform2"> 
+        <input autocomplete="off" autofocus class="form-control" name=totalSell value="sell" placeholder="Quantity in R$" type="number" required>
+    </div>
+    <br>
+    <div class="marketform2"> 
+        <textarea autocomplete="off" autofocus class="form-control" name=commentSell placeholder="Comments (optional)" type="text"></textarea>
+    </div>
+    <br>
+    <button class="btn btn-success" type="submit" name="button" value="sell">Sell Order</button>
+    <br>
+    <br>
+    <p>By making a Sell Order you will receive an email for you to confirm the transaction.</p>
+</form>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+
+<form class="market" action="/market" method="post">
+    <h4>WITHDRAWAL</h4>
+    <br>
+    <div class="marketform1"> 
+        <input autocomplete="off" autofocus class="form-control" name=withdraw placeholder="Quantity in R$" type="number" step=".01" required>
+    </div>
+    <br>
+    <button class="btn btn-success" name="button" type="submit" value="withdraw">Withdraw</button>
+    <br>
+    <br>
+    <p>By making a Withdrawal request, your funds will be in your bank account in 1 working day.</p>
+</form>
+
+<br>
+<br>
+<hr>
+<br>
+<br>
+{% endblock main %}

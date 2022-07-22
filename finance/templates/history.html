@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <h1 style="font-size:250%">MY HISTORY</h1>
+    <br>
+    <table class="portfolio">
+        <tr>
+            <th>TRANSACTION ID</th>
+            <th>DATE / TIME</th>
+            <th>STOCK SYMBOL</th>
+            <th>PRICE</th>
+            <th>NUMBER OF SHARES</th>
+            <th>TOTAL</th>
+            <th>TYPE OF TRANSACTION</th>
+        </tr>
+        {% for i in range(size[0]['COUNT(TransactionID)']) %}
+        <tr>
+            <td>{{ history[i]['TransactionID'] }}</td>
+            <td>{{ history[i]['DateTime'] }}</td>
+            <td>{{ history[i]['Symbol'] }}</td>
+            <td>{{ history[i]['Price'] | usd }}</td>
+            <td>{{ history[i]['Shares'] }}</td>
+            <td>{{ history[i]['Total'] | usd }}</td>
+            <td>{{ history[i]['Type'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+
+
+{% endblock %}

@@ -1,0 +1,128 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      Admin Edit
+{% endblock title %}
+
+{% block main %}
+  <br>
+  <h1 style="text-align: center;">ADMIN</h1>
+  <br>
+  <br>
+  <form class="market" action="/edittransaction" method="post">
+    <h4 style="text-align: center;">EDIT TRANSACTION HISTORY</h4>
+    <br>
+    <div class="marketform1"> 
+        <label for="transaction_id">Transaction ID</label>
+        <input autocomplete="off" autofocus class="form-control" name="transaction_id" value="{{ history[0][0] }}" type="number" readonly>
+    </div>
+    <br>
+    <div class="marketform1">
+        <label for="user_id">User ID</label> 
+        <input autocomplete="off" autofocus class="form-control" name="user_id" value="{{ history[0][1] }}" type="number" readonly>
+    </div>
+    <br>
+    <div class="marketform1"> 
+        <label for="date_time">Date/Time</label> 
+        <input autocomplete="off" autofocus class="form-control" name="date_time" value="{{ history[0][2] }}" type="text" readonly>
+    </div>
+    <br>
+    <div class="marketform1">
+        <label for="coin_symbol">Coin Symbol</label>
+        <select autocomplete="off" autofocus class="form-control" name="coin_symbol" value="{{ history[0][3] }}" type="text">
+            {% if history[0][3] == 'Dollar' %}
+                <option selected>Dollar</option>
+                <option>Bitcoin</option>
+                <option>Real (withdrawal)</option>
+            {% elif history[0][3] == 'Bitcoin' %}
+                <option>Dollar</option>
+                <option selected>Bitcoin</option>
+                <option>Real (withdrawal)</option>
+            {% elif history[0][3] == 'Real (withdrawal)' %}
+                <option>Dollar</option>
+                <option>Bitcoin</option>
+                <option selected>Real (withdrawal)</option>
+            {% endif %}}
+        </select>
+    </div>
+    <br>
+    <div class="marketform1"> 
+        <label for="price">Price</label>
+        <input autocomplete="off" autofocus class="form-control" name="price"  value="{{ price }}" type="text" readonly>
+    </div>
+    <br>
+    <div class="marketform1"> 
+        <label for="number_coins">Number of Coins</label>
+        <input autocomplete="off" autofocus class="form-control" name="number_coins" value="{{ history[0][5] }}" type="text">
+    </div>
+    <br>
+    <div class="marketform1"> 
+        <label for="total">Total</label>
+        <input autocomplete="off" autofocus class="form-control" name="total" value="{{ history[0][6] }}" type="text">
+    </div>
+    <br>
+    <div class="marketform1">
+        <label for="transaction_type">Transaction Type</label>
+        <select autocomplete="off" autofocus class="form-control" name="transaction_type" value="{{ history[0][7] }}" type="text">
+            {% if history[0][7] == 'Buy' %}
+                <option selected>Buy</option>
+                <option>Sell</option>
+                <option>Deposit</option>
+                <option>Withdrawal</option>
+            {% elif history[0][7] == 'Sell' %}
+                <option>Buy</option>
+                <option selected>Sell</option>
+                <option>Deposit</option>
+                <option>Withdrawal</option>
+            {% elif history[0][7] == 'Deposit' %}
+                <option>Buy</option>
+                <option>Sell</option>
+                <option selected>Deposit</option>
+                <option>Withdrawal</option>
+            {% elif history[0][7] == 'Withdrawal' %}
+                <option>Buy</option>
+                <option>Sell</option>
+                <option>Deposit</option>
+                <option selected>Withdrawal</option>
+            {% endif %}}
+        </select>
+    </div>
+    <br>
+    <div class="marketform1"> 
+        <label for="comments">Comments</label>
+        <input autocomplete="off" autofocus class="form-control" name="comments" value="{{ history[0][8] }}" type="text">
+    </div>
+    <br>
+    <div class="marketform1">
+        <label for="status">Status</label>
+        <select autocomplete="off" autofocus class="form-control" name="status" value="{{ history[0][9] }}" type="text">
+            {% if history[0][9] == 'Insufficient Coins' %} 
+                <option>Pending</option>
+                <option>Confirmed</option>
+                <option>Expired</option>
+                <option selected>Insufficient Coins</option>
+            {% elif history[0][9] == 'Expired' %} 
+                <option>Pending</option>
+                <option>Confirmed</option>
+                <option selected>Expired</option>
+                <option>Insufficient Coins</option>
+            {% elif history[0][9] == 'Confirmed' %}
+                <option>Pending</option>
+                <option selected>Confirmed</option>
+                <option>Expired</option>
+                <option>Insufficient Coins</option>
+            {% else %} 
+                <option selected>Pending</option>
+                <option>Confirmed</option>
+                <option>Expired</option>
+                <option>Insufficient Coins</option>
+            {% endif %}}
+        </select>
+    </div>
+    <br>
+    <button class="btn btn-success" name="button" type="submit" value="buy">Confirm Update</button>
+    <br>
+    <br>
+</form>
+
+{% endblock main %}

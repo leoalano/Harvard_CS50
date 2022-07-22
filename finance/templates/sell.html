@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Sell
+{% endblock %}
+
+{% block main %}
+    <h1 style="font-size:85%">SELL</h1>
+    <p>Type below the symbol of your chosen stock and the number of shares you would like to sell.</p>
+    <br>
+
+
+    <form action="/sell" method="post">
+        <div>
+            <select autocomplete="off" autofocus class="form-control" name="symbol" placeholder="stock symbol" type="text">
+                {% for i in range(stockVariety) %}
+                <option>{{ stocks[i]['Symbol'] }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <div>
+            <input autocomplete="off" autofocus class="form-control" name="shares" placeholder="Number of shares" type="text">
+        </div>
+        <br>
+        <button class="btn btn-primary" type="submit">Sell</button>
+
+{% endblock %}

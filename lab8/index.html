@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+
+        <script>
+
+            // TODO: Add code to check answers to questions
+            //brazil wrong button
+            document.addEventListener('DOMContentLoaded', function() {
+
+                let brazil = document.querySelector('#brazil');
+                brazil.addEventListener('click', function(){
+                    brazil.style.backgroundColor = 'red';
+                    document.querySelector('#correct').innerHTML = 'Incorrect';
+                })
+
+
+            //USA wrong button
+
+                let usa = document.querySelector('#usa');
+                usa.addEventListener('click', function(){
+                    usa.style.backgroundColor = 'red';
+                    document.querySelector('#correct').innerHTML = 'Incorrect';
+                })
+
+
+            //El Salvador correct button
+
+                let elsalvador = document.querySelector('#elsalvador');
+                elsalvador.addEventListener('click', function(){
+                    elsalvador.style.backgroundColor = 'green';
+                    document.querySelector('#correct').innerHTML = 'Correct';
+                })
+
+            // part 2
+
+                document.querySelector('#submitbutton').addEventListener('click', function(){
+                    let input = document.querySelector('#inputid');
+                    if (input.value === 'there is no second best') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#correct2').innerHTML = 'Correct';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#correct2').innerHTML = 'Incorrect';
+                    }
+                });
+
+            });
+
+
+        </script>
+
+    </head>
+    <body>
+
+        <div class="jumbotron">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>What country has Bitcoin as legal tender?</h3>
+                <!-- TODO: Add multiple choice question here -->
+                    <button id = 'brazil'>Brazil</button>
+                    <button id = 'elsalvador'>El Salvador</button>
+                    <button id = 'usa'>United States</button>
+
+                    <p id = "correct"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>After bitcoin, what's the second best crypto asset?</h3>
+
+                <!-- TODO: Add free response question here -->
+
+                    <input name='input' type='text' id='inputid'>
+                    <button id = 'submitbutton'>Submit</button>
+
+
+                    <p id = "correct2"></p>
+
+            </div>
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+      Holdings
+{% endblock title %}
+
+{% block main %}
+
+<br>
+<h1 style="text-align: center;">MY HOLDINGS</h1>
+<br>
+
+<table class="portfolio">
+      <tr>
+          <th>REAIS</th>
+          <td> R$ {{ reaisbalance }} </td>
+      </tr>
+      <tr>
+          <th>DOLLARS</th>
+          <td> US$ {{ dollarbalance }} </td>
+      </tr>
+      <tr>
+          <th>BITCOIN</th>
+          <td> ₿ {{ bitcoinbalance }} </td>
+      </tr>
+  </table>
+  
+
+
+
+
+
+{% endblock main %}

@@ -1,0 +1,1 @@
+SELECT name FROM people JOIN movies JOIN stars WHERE movies.title='Toy Story' AND stars.movie_id=movies.id AND people.id=stars.person_id;

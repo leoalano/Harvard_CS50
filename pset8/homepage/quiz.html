@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    <link href="styles.css" rel="stylesheet">
+    <title>Casa Bitcoin - Quiz do Bitcoin</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="bitcoin, criptomoedas, bitcoin maximalismo, comprar bitcoin, preço bitcoin, valor bitcoin, sobre bitcoin, o que é bitcoin?">
+    <meta name="description" content="Um lugar para aprender sobre Bitcoin">
+    <meta name="author" content="@brazilianHodl">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+    <script src="script.js"></script>
+  </head>
+
+   <body>
+      <nav class="navigationbar">
+        <ul id="navbar">
+          <li id="home"><a class="navigationbar" href="index.html"><b>Home</b></a></li>
+          <li id="valor"><a class="navigationbar" href="valor.html"><b>Valor do Bitcoin</b></a></li>
+          <li id="bitcoin"><a class="navigationbar" href="bitcoin.html"><b>Sobre o Bitcoin</b></a></li>
+          <li id="quiz"><a class="navigationbar" href="quiz.html"><b>Quiz do Bitcoin</b></a></li>
+        </ul>
+      </nav>
+
+      <div style="background-color: #f38f37; padding-top: 30px; padding-bottom: 0px; font-family: Lato">
+        <h1>Quiz do Bitcoin</h1>
+        <br>
+        <br>
+      </div>
+
+      <form name="quiz1" style="padding-top:30px; padding-bottom:30px; text-align:left; padding-left:30px">
+        <div>
+          <p><b><span class="badge badge-dark">1</span> Qual a quantidade máxima de Bitcoins que existirá?</b></p>
+          <p><input type="radio" value="quant1" name="quantidade"> Yes</p>
+          <p><input type="radio" value="quant2" name="quantidade"> No</p>
+          <p><input type="radio" value="quant3" name="quantidade"> 100 milhões de Bitcoins</p>
+          <p><input type="radio" value="quant4" name="quantidade"> 18 milhões de Bitcoins</p>
+        </div>
+
+        <br>
+
+        <div>
+          <p><b><span class="badge badge-dark">2</span> Em torno de quantas Bitcoins existem hoje em dia (2021)?</b></p>
+          <p><input type="radio" value="atual1" name="atual"> 21 milhões</p>
+          <p><input type="radio" value="atual2" name="atual"> 80 milhões</p>
+          <p><input type="radio" value="atual3" name="atual"> 19 milhões</p>
+          <p><input type="radio" value="atual4" name="atual"> 10 milhões</p>
+        </div>
+
+        <br>
+
+        <div>
+          <p><b><span class="badge badge-dark">3</span> O que é mais antigo, o dinheiro ou a escrita?</b></p>
+          <p><input type="radio" value="dinheiro1" name="dinheiro"> dinheiro</p>
+          <p><input type="radio" value="dinheiro2" name="dinheiro"> escrita</p>
+          <p><input type="radio" value="dinheiro3" name="dinheiro"> Não é possível saber</p>
+        </div>
+
+        <br>
+
+        <div>
+          <p><b><span class="badge badge-dark">4</span> No Brasil, qual foi o aumento do agregado monetário (quantidade disponível de reais) nos últimos 20 anos?</b></p>
+          <p><input type="radio" value="agregado1" name="agregado"> Aumentou 3 vezes</p>
+          <p><input type="radio" value="agregado2" name="agregado"> Diminui</p>
+          <p><input type="radio" value="agregado3" name="agregado"> Aumentou 14 vezes</p>
+          <p><input type="radio" value="agregado4" name="agregado"> Aumentou 30 vezes</p>
+        </div>
+
+        <br>
+
+        <div>
+          <p><b><span class="badge badge-dark">5</span> As moedas governamentais perdem constantemente seu valor. No Brasil, se compararmos ao ouro, quanto o Real se desvalorizou nos últimos 20 anos?</b></p>
+          <p><input type="radio" value="ouro1" name="ouro"> Desvalorizou 3%</p>
+          <p><input type="radio" value="ouro2" name="ouro"> Desvalorizou 20%</p>
+          <p><input type="radio" value="ouro3" name="ouro"> O Real se valorizou</p>
+          <p><input type="radio" value="ouro4" name="ouro"> Desvalorizou 95%</p>
+        </div>
+
+        <br>
+
+        <div>
+          <p><b><span class="badge badge-dark">6</span> A quantidade de novos Bitcoins produzidos para recompensar os Mineradores que protegem a rede:</b></p>
+          <p><input type="radio" value="mineradores1" name="mineradores"> Diminui pela metade a cada 4 anos</p>
+          <p><input type="radio" value="mineradores2" name="mineradores"> Todos os Bitcoins já foram produzidos</p>
+          <p><input type="radio" value="mineradores3" name="mineradores"> Diminui pela metade a cada ano</p>
+          <p><input type="radio" value="mineradores4" name="mineradores"> Dobra a cada 4 anos</p>
+        </div>
+
+        <br>
+
+        <div>
+          <p><b><span class="badge badge-dark">7</span> Quanto foi o aumento de preço do Bitcoin nos últimos 5 anos em Reais?</b></p>
+          <p><input type="radio" value="preço1" name="preço"> Aumentou 3 vezes</p>
+          <p><input type="radio" value="preço2" name="preço"> Aumentou 20 vezes</p>
+          <p><input type="radio" value="preço3" name="preço"> Aumentou 80 vezes</p>
+          <p><input type="radio" value="preço4" name="preço"> Aumentou 150 vezes</p>
+        </div>
+
+        <br>
+
+        <br>
+
+        <p id="result">Meu resultado...</p>
+
+
+
+        <br>
+        <input type="button" value="Checar meu resultado" onclick="check()">
+        <input type="submit" value="Recomeçar">
+      </form>
+
+      <div class="footer">
+        <p>&#169;2021 - <a href="https://twitter.com/brazilianhodl">@brazilianHodl</a> - &#128516;</p>
+      </div>
+
+   </body>
+</html>
